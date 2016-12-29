@@ -7,7 +7,7 @@ import { MenuService } from './menu.service';
 
 
 @Component({
-  selector: 'acn-menu',
+  selector: 'tam-menu',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
@@ -22,9 +22,6 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   public menuItems: any[];
   protected _menuItemsSub: Subscription;
-  public showHoverElem: boolean;
-  public hoverElemHeight: number;
-  public hoverElemTop: number;
   protected onRouteChange: Subscription;
   public outOfArea: number = -200;
 
@@ -61,12 +58,6 @@ export class MenuComponent implements OnInit, OnDestroy {
   public ngOnDestroy(): void {
     this.onRouteChange.unsubscribe();
     this._menuItemsSub.unsubscribe();
-  }
-
-  public hoverItem($event): void {
-    this.showHoverElem = true;
-    this.hoverElemHeight = $event.currentTarget.clientHeight;
-    this.hoverElemTop = $event.currentTarget.getBoundingClientRect().top - 66;
   }
 
   public toggleSubMenu($event): boolean {

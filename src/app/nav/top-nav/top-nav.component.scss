@@ -23,7 +23,7 @@
   }
 }
 
-a.al-logo {
+.al-logo {
   color: $sidebar-text;
   display: block;
   font-size: 24px;
@@ -32,13 +32,14 @@ a.al-logo {
   float: left;
   outline: none !important;
   line-height: 60px;
+  font-size: 18px;
 
   span {
     color: $primary;
   }
 }
 
-a.al-logo:hover {
+.al-logo:hover {
   color: $primary;
 }
 
@@ -82,7 +83,7 @@ a.refresh-data {
   }
 }
 
-a.collapse-menu-link {
+.collapse-menu-link {
   font-size: 31px;
   cursor: pointer;
   display: block;
@@ -92,7 +93,8 @@ a.collapse-menu-link {
   padding: 0;
   float: left;
   margin: 11px 0 0 25px;
-
+  left: 20px;
+  position: fixed;
   &:hover {
     text-decoration: none;
     color: $warning;

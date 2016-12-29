@@ -1,5 +1,5 @@
 {
-  "name": "acn-ng-catalog",
+  "name": "tam-ng-catalog",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
@@ -22,6 +22,7 @@
     "@angular/router": "~3.4.1",
     "@types/jquery": "^2.0.34",
     "@types/lodash": "^4.14.44",
+    "angular2-google-maps": "^0.17.0",
     "bootstrap": "^4.0.0-alpha.5",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",

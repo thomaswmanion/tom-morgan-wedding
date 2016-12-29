@@ -10,3 +10,15 @@
     padding: 8px 20px;
   }
 }
+
+@media (min-width: $resXS + 1) {
+  .page-top {
+    display: none;
+  }
+  .al-sidebar {
+    top: 0 !important;
+  }
+  .al-main {
+    padding-top: 0 !important;
+  }
+}

@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'acn-menu-item',
+  selector: 'tam-menu-item',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './menu-item.component.html',
   styleUrls: ['./menu-item.component.scss']

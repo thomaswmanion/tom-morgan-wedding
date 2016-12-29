@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewEncapsulation, OnInit, AfterViewInit, Output, EventEmitter } from '@angular/core';
+
 @Component({
-  selector: 'acn-sidebar',
+  selector: 'tam-sidebar',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']

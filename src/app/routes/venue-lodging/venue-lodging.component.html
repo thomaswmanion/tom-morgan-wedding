@@ -1,0 +1,31 @@
+<div class="card head-title">
+  <h1>Venue &amp; Lodging</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card sub-title">
+        <h2><strong>Venue: </strong> MaryBud Farm</h2>
+        <img class="img-fluid" src="{{marybud}}">
+
+        <p class="card-text">
+          <strong>Address:</strong> 42695 N Hunt Club Rd, Antioch, IL, 60002
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card sub-title">
+        <h2><strong>Lodging: </strong> KeyLime Cove</h2>
+        <img class="img-fluid" src="{{keylime}}">
+
+        <p class="card-text">
+          <strong>Address:</strong> 1700 Nations Dr, Gurnee, IL 60031
+        </p>
+      </div>
+    </div>
+  </div>
+  <sebm-google-map [latitude]="42.4784646" [longitude]="-87.9676458" [zoom]="10" [disableDefaultUI]="false" [zoomControl]="true">
+    <sebm-google-map-marker [latitude]="42.4784646" [longitude]="-87.9676458" [label]="'MaryBud'"></sebm-google-map-marker>
+    <sebm-google-map-marker [latitude]="42.3835689" [longitude]="-87.9452401" [label]="'KeyLime'"></sebm-google-map-marker>
+  </sebm-google-map>
+</div>

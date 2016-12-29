@@ -1,0 +1,30 @@
+<div class="card head-title">
+  <h1>Bridal Party</h1>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card sub-title">
+        <h2 class="text-center">Morgan's Bridesmaids</h2>
+        <div *ngFor="let bridesmaid of bridesmaids">
+          <hr>
+          <h3>{{bridesmaid.name}}</h3>
+          <h4>{{bridesmaid.title}}</h4>
+          <p>{{bridesmaid.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" style="display: none;">
+      <div class="card sub-title">
+        <h2 class="text-center">Tom's Groomsmen</h2>
+        <div *ngFor="let groomsman of groomsmen">
+          <hr>
+          <h3>{{bridesmaid.name}}</h3>
+          <h4>{{bridesmaid.title}}</h4>
+          <p>{{bridesmaid.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

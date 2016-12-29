@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'acn-top-nav',
+  selector: 'tam-top-nav',
   templateUrl: './top-nav.component.html',
   styleUrls: ['./top-nav.component.scss']
 })
-export class TopNavComponent implements OnInit {
+export class TopNavComponent {
+  public isScrolled:boolean = false;
+  @Output() public menuCollapsed: EventEmitter<boolean> = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  public toggleMenu() {
+    this.menuCollapsed.emit(undefined);
   }
-
 }

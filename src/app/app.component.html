@@ -1,6 +1,6 @@
 <div [ngClass]="{'menu-collapsed': isMenuCollapsed}">
-  <acn-top-nav></acn-top-nav>
-  <acn-sidebar (menuCollapsed)="toggleNav($event)"></acn-sidebar>
+  <tam-top-nav (menuCollapsed)="toggleNav($event)"></tam-top-nav>
+  <tam-sidebar (menuCollapsed)="toggleNav($event)"></tam-sidebar>
   <div class="al-main">
     <div class="al-content container-fluid">
       <router-outlet></router-outlet>
