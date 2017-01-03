@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { AngularFire } from 'angularfire2';
 import { Subscription } from 'rxjs/Rx';
 import * as $ from 'jquery';
 
@@ -25,7 +26,7 @@ export class MenuComponent implements OnInit, OnDestroy {
   protected onRouteChange: Subscription;
   public outOfArea: number = -200;
 
-  constructor(private router: Router, private menuService: MenuService) {
+  constructor(private router: Router, private menuService: MenuService, private af: AngularFire) {
     this.onRouteChange = this.router.events.subscribe((event) => {
 
       if (event instanceof NavigationEnd) {

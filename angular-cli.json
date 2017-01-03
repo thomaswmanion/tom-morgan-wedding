@@ -15,7 +15,7 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "acn",
+      "prefix": "tam",
       "mobile": false,
       "styles": [
         "styles.css"

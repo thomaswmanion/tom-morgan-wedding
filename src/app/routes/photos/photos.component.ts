@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'acn-photos',
+  selector: 'tam-photos',
   templateUrl: './photos.component.html',
   styleUrls: ['./photos.component.scss']
 })

@@ -1,0 +1,9 @@
+<div class="container">
+  <form class="form" (ngSubmit)="submitKey(keyForm)" [formGroup]="keyForm">
+    <h2 class="form-heading">Create Account - Key Entry</h2>
+    <p>Please enter your key found on your letter.</p>
+    <label for="key" class="sr-only">Key</label>
+    <input formControlName="key" type="text" id="key" class="form-control" placeholder="Key" required autofocus>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Enter</button>
+  </form>
+</div>

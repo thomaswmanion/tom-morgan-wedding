@@ -7,8 +7,14 @@ import { OurStoryComponent } from './our-story/our-story.component';
 import { BridalPartyComponent } from './bridal-party/bridal-party.component';
 import { PhotosComponent } from './photos/photos.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 export const appRoutes: Routes = [
+    {
+        path: 'login',
+        component: LoginComponent
+    },
     {
         path: '',
         component: HomeComponent,
@@ -77,6 +83,17 @@ export const appRoutes: Routes = [
             menu: {
                 title: 'RSVP',
                 icon: 'fa fa-envelope-o'
+            }
+        }
+    },
+    {
+        path: 'logout',
+        component: LogoutComponent,
+        data: {
+            menu: {
+                title: 'Logout',
+                icon: 'fa fa-sign-out',
+                logout: true
             }
         }
     }

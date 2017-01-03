@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { PartyMember } from './party-member.model';
 
 @Component({
-  selector: 'acn-bridal-party',
+  selector: 'tam-bridal-party',
   templateUrl: './bridal-party.component.html',
   styleUrls: ['./bridal-party.component.scss']
 })

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { AngularFire, FirebaseAuthState } from 'angularfire2';
 import * as _ from 'lodash';
 
 import { appRoutes } from '../../routes/routes';
@@ -11,8 +12,10 @@ export class MenuService {
 
     protected _currentMenuItem = {};
 
-    constructor(private router: Router) {
-        this.updateMenuByRoutes(appRoutes);
+    constructor(private router: Router, private af: AngularFire) {
+        this.af.auth.subscribe((val) => {
+            this.updateMenuByRoutes(appRoutes, !!val); 
+        });
     }
 
     /**
@@ -20,8 +23,10 @@ export class MenuService {
      *
      * @param {Routes} routes Type compatible with app.menu.ts
      */
-    public updateMenuByRoutes(routes: Routes) {
-        let convertedRoutes = this.convertRoutesToMenus(_.cloneDeep(routes));
+    public updateMenuByRoutes(routes: Routes, isLoggedIn: boolean) {
+        let convertedRoutes = this.convertRoutesToMenus(_.cloneDeep(routes)).filter(c => {
+            return !c.logout || isLoggedIn;
+        });
         this.menuItems.next(convertedRoutes);
     }
 

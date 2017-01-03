@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'acn-our-story',
+  selector: 'tam-our-story',
   templateUrl: './our-story.component.html',
   styleUrls: ['./our-story.component.scss']
 })
