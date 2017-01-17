@@ -5,10 +5,11 @@ import { VenueLodgingComponent } from './venue-lodging/venue-lodging.component';
 import { RegistryInformationComponent } from './registry-information/registry-information.component';
 import { OurStoryComponent } from './our-story/our-story.component';
 import { BridalPartyComponent } from './bridal-party/bridal-party.component';
-import { PhotosComponent } from './photos/photos.component';
+//import { PhotosComponent } from './photos/photos.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 export const appRoutes: Routes = [
     {
@@ -38,7 +39,8 @@ export const appRoutes: Routes = [
     },
     {
         path: 'registry-information',
-        component: RegistryInformationComponent,
+        component: ComingSoonComponent,
+        //component: RegistryInformationComponent,
         data: {
             menu: {
                 title: 'Registry Information',
@@ -66,7 +68,7 @@ export const appRoutes: Routes = [
             }
         }
     },
-    {
+    /*{
         path: 'photos',
         component: PhotosComponent,
         data: {
@@ -75,10 +77,11 @@ export const appRoutes: Routes = [
                 icon: 'fa fa-file-image-o'
             }
         }
-    },
+    },*/
     {
         path: 'rsvp',
-        component: RsvpComponent,
+        //component: RsvpComponent,
+        component: ComingSoonComponent,
         data: {
             menu: {
                 title: 'RSVP',

@@ -1,3 +1,5 @@
+@import "./theme-variables";
+
 .head-title {
     background-color: maroon;
     text-align: center;
@@ -5,4 +7,27 @@
 
 .sub-title {
     background-color: #bca897;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    font-family: AlexBrush, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    background-color: $blue;
+    text-align: left;
+    font-size: 0.5em !important;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    background-color: $blue;
+    text-align: center;
+    font-size: 1.5em !important;
+    span {
+        color: $yellow;
+    }
 }

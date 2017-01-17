@@ -1,8 +1,8 @@
-<div class="card head-title">
-  <h1>Bridal Party</h1>
-</div>
-
 <div class="container">
+  <div class="header">
+    <h1>Bridal Party</h1>
+  </div>
+  <br>
   <div class="row">
     <div class="col-md-6">
       <div class="card sub-title">
@@ -11,18 +11,18 @@
           <hr>
           <h3>{{bridesmaid.name}}</h3>
           <h4>{{bridesmaid.title}}</h4>
-          <p>{{bridesmaid.description}}</p>
+          <!-- <p>{{bridesmaid.description}}</p> -->
         </div>
       </div>
     </div>
-    <div class="col-md-6" style="display: none;">
+    <div class="col-md-6">
       <div class="card sub-title">
         <h2 class="text-center">Tom's Groomsmen</h2>
         <div *ngFor="let groomsman of groomsmen">
           <hr>
-          <h3>{{bridesmaid.name}}</h3>
-          <h4>{{bridesmaid.title}}</h4>
-          <p>{{bridesmaid.description}}</p>
+          <h3>{{groomsman.name}}</h3>
+          <h4>{{groomsman.title}}</h4>
+          <!-- <p>{{groomsman.description}}</p> -->
         </div>
       </div>
     </div>

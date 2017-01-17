@@ -1,3 +1,5 @@
+@import "../theme/theme-variables";
+
 $top-height: 66px;
 $sidebar-width: 180px;
 
@@ -21,8 +23,8 @@ $input-border: shade($border, 5%);
 $input-background: #ffffff;
 $dropdown-text: #7d7d7d;
 
-$sidebar: #000033;
-$sidebar-text: #ffffff;
+$sidebar: white;
+$sidebar-text: $maroon;
 
 $mail-box: whitesmoke;
 $auth-panel-background: #ffffff;
@@ -36,7 +38,7 @@ $bootstrap-panel-header-bg: $bootstrap-panel-bg;
 $bootstrap-panel-header-border: 1px solid rgba(0, 0, 0, 0.12);
 $bootstrap-panel-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.25);
 
-$primary: maroon !default;
+$primary: $yellow !default;
 $info: #2dacd1 !default;
 $success: #90b900 !default;
 $warning: #dfb81c !default;

@@ -21,3 +21,4 @@ export class RsvpComponent extends ProtectedRoute implements OnInit {
   }
 
 }
+

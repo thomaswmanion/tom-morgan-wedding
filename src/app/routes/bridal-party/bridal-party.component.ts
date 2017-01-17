@@ -18,7 +18,14 @@ export class BridalPartyComponent implements OnInit {
     new PartyMember('Jessica Tranter', 'Bridesmaid', 'Sister since our 2011 trip through the MN State Fair’s Miracle of Birth Center'),
     new PartyMember('Breanna Wimmler', 'Bridesmaid', 'Best friend, and fellow Gopher, since 2009 when she was my sexile savior with Erica'),
   ];
-  public groomsmen: PartyMember[] = [];
+  public groomsmen: PartyMember[] = [
+    new PartyMember('Kyle Ewert', 'Co-Best Man', undefined),
+    new PartyMember('Brian Manion', 'Co-Best Man', undefined),
+    new PartyMember('Drew Haefner', 'Groomsman', undefined),
+    new PartyMember('Stefan Platikanov', 'Groomsman', undefined),
+    new PartyMember('Akersh Srivastava', 'Groomsman', undefined),
+    new PartyMember('Kevin Tesch', 'Groomsman', undefined)
+  ];
   constructor() { }
 
   ngOnInit() {

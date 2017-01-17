@@ -13,8 +13,10 @@ import { UserState } from './user.state';
   providers: [UserState]
 })
 export class AppComponent {
+  weddingBanner: string = require('./Wedding-Banner.gif');
   public isMenuCollapsed: boolean;
   public isLoggedIn: boolean = false;
+  public route: string;
 
   constructor(
     private router: Router,
@@ -24,7 +26,7 @@ export class AppComponent {
     this.scrollToTopOnRouteChange();
     this.userState.authState.subscribe((state) => {
       this.isLoggedIn = !!state;
-    })
+    });
   }
 
   toggleNav(toState: boolean): void {
@@ -41,6 +43,7 @@ export class AppComponent {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
+      console.log(evt);
       document.body.scrollTop = 0;
 
       if ($(document).width() <= 500) {
