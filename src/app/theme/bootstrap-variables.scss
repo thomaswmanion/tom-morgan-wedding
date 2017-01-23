@@ -1,3 +1,5 @@
+@import "./theme-variables";
+
 // Variables
 //
 // Copy settings from this file into the provided `_custom.scss` to override
@@ -19,7 +21,7 @@ $gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #0275d8 !default;
+$brand-primary:             $yellow;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
@@ -203,8 +205,8 @@ $btn-box-shadow:                 inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px 
 $btn-active-box-shadow:          inset 0 3px 5px rgba(0,0,0,.125) !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             $btn-primary-bg !default;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $maroon;
 
 $btn-secondary-color:            $gray-dark !default;
 $btn-secondary-bg:               #fff !default;

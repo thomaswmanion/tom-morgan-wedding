@@ -10,6 +10,7 @@ import { RsvpComponent } from './rsvp/rsvp.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { SaveTheDateComponent } from './save-the-date/save-the-date.component';
 
 export const appRoutes: Routes = [
     {
@@ -88,6 +89,16 @@ export const appRoutes: Routes = [
                 icon: 'fa fa-envelope-o'
             }
         }
+    },
+    {
+        path: 'save-the-date',
+        component: SaveTheDateComponent/*,
+        data: {
+            menu: {
+                title: 'Save the Date',
+                icon: 'fa fa-save'
+            }
+        }*/
     },
     {
         path: 'logout',
