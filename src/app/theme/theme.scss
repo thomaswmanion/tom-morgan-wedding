@@ -29,6 +29,12 @@ body {
     height: 300px;
 }
 
+.short-img {
+    max-height: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
 .block {
     font-family: 'Arapey', 'Courier New', Courier, monospace;
 }

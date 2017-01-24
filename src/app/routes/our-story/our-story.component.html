@@ -1,32 +1,16 @@
 <div class="container">
-  <div class="header">
-    <h1>Our Story</h1>
-  </div>
-
-  <div class="media">
-    <div class="media-left">
-      <img class="media-object story-img" src="{{umn}}" alt="University of Minnesota">
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">Media heading</h4>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-      in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
-      in faucibus.
-    </div>
-  </div>
-
-  <br>
-
-  <div class="media">
-    <div class="media-body">
-      <h4 class="media-heading">Media heading</h4>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum
-      in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
-      in faucibus.
-    </div>
-    <div class="media-right">
-      <img class="media-object story-img" src="{{library}}" alt="Library Bar - Minneapolis">
-    </div>
-  </div>
-
+  <ul class="timeline">
+    <li *ngFor="let pagePiece of pagePieces; let i = index" [ngClass]="{'timeline-inverted': pagePiece.isFlip}">
+      <div *ngIf="pagePiece.isDatePagePiece" class="tldate">{{pagePiece.date | date:"MMM yyyy"}}</div>
+      <div class="tl-circ" *ngIf="!pagePiece.isDatePagePiece"></div>
+      <div class="timeline-panel" *ngIf="!pagePiece.isDatePagePiece">
+        <div class="tl-heading">
+          <h4>{{pagePiece.title}}</h4>
+          <p><small class="text-muted"><i class="fa fa-calendar" aria-hidden="true"></i> {{pagePiece.date | date:"MMMM d, yyyy"}}</small></p>
+        </div>
+        <div class="tl-body" [innerHTML]="pagePiece.html">
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
