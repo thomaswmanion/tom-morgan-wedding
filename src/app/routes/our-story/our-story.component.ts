@@ -20,7 +20,7 @@ export class OurStoryComponent implements OnInit {
 
   pagePieces: PagePiece[] = [
     new DatePagePiece(new Date('02/01/2013')),
-    new TextPagePiece(new Date('02/08/2013'), 'Tom and Morgan Meet', `<p>Tom and Morgan meet while students at the University of Minnesota.</p><img class="img-fluid center-img" src=${this.firstTexts}>`),
+    new TextPagePiece(new Date('02/08/2013'), 'Our Story begins...', `<p>Tom and Morgan meet while students at the University of Minnesota.</p><img class="img-fluid center-img" src=${this.firstTexts}>`),
     new TextPagePiece(new Date('02/20/2013'), 'First Date', `<p>They study together at Panera Bread. Morgan hides her nerves intensely prepping for her equine management exam, while Tom is too nervous to study for computer vision.</p><img class="short-img img-fluid" src=${this.panera}>`).flip(),
     new TextPagePiece(new Date('02/22/2013'), 'First "Real" Date', `<p>Tom treats Morgan to a romantic dinner at Loring Pasta Bar, and later they shared their first kiss.</p><img class="short-img img-fluid" src=${this.loring}>`),
     new DatePagePiece(new Date('03/01/2013')),
@@ -35,7 +35,7 @@ export class OurStoryComponent implements OnInit {
     const today = new Date();
     const todayPiece = new TextPagePiece(today, 'Today!', `<img src="${this.usChristmas}" class="img-fluid center-img">`);
     const weddingDate = new Date('09/02/2017');
-    const weddingPiece = new TextPagePiece(weddingDate, 'Tom and Morgan to get married!', '<p>Tom and Morgan will exchange vows, on the MacDonald’s farm, surrounded by all of the people who have supported them</p>' + `<img src="${this.champagne}" class="img-fluid center-img">`)
+    const weddingPiece = new TextPagePiece(weddingDate, 'Tom and Morgan to get married!', '<p>Tom and Morgan will exchange vows, on the MacDonald’s farm, surrounded by all of the people who have supported them.</p>' + `<img src="${this.champagne}" class="img-fluid center-img">`)
     if (+today < +weddingDate) {
       this.pagePieces.push(todayPiece.flip(), weddingPiece);
     }
