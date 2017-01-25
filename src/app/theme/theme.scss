@@ -35,6 +35,11 @@ body {
     display: block;
 }
 
+.center-img {
+    margin: 0 auto;
+    display: block;
+}
+
 .block {
     font-family: 'Arapey', 'Courier New', Courier, monospace;
 }
@@ -45,7 +50,7 @@ body {
 
 @font-face {
   font-family: 'AlexBrush';
-  src: url('./AlexBrush-Regular.ttf');
+  src: url('./fonts/Arapey-Regular.ttf');
 }
 
 @font-face {

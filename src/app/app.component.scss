@@ -34,6 +34,7 @@
     display: block;
     z-index: 11;
     position: relative;
+    max-height: 230px;
 }
 @media (min-width: $resXS + 1) {
   .top {
