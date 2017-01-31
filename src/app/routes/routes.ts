@@ -39,17 +39,6 @@ export const appRoutes: Routes = [
         }
     },
     {
-        path: 'registry-information',
-        component: ComingSoonComponent,
-        //component: RegistryInformationComponent,
-        data: {
-            menu: {
-                title: 'Registry Information',
-                icon: 'fa fa-shopping-cart'
-            }
-        }
-    },
-    {
         path: 'story',
         component: OurStoryComponent,
         data: {
@@ -87,6 +76,17 @@ export const appRoutes: Routes = [
             menu: {
                 title: 'RSVP',
                 icon: 'fa fa-envelope-o'
+            }
+        }
+    },
+    {
+        path: 'registry-information',
+        component: ComingSoonComponent,
+        //component: RegistryInformationComponent,
+        data: {
+            menu: {
+                title: 'Registry Information',
+                icon: 'fa fa-shopping-cart'
             }
         }
     },

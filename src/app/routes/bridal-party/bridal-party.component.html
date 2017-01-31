@@ -6,23 +6,31 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card sub-title">
-        <h2 class="text-center">Morgan's Bridesmaids</h2>
-        <div *ngFor="let bridesmaid of bridesmaids">
-          <hr>
-          <h3>{{bridesmaid.name}}</h3>
-          <h4>{{bridesmaid.title}}</h4>
-          <!-- <p>{{bridesmaid.description}}</p> -->
+        <h2 class="text-center title">Morgan's Bridesmaids</h2>
+        <div class="list-group">
+          <div *ngFor="let bridesmaid of bridesmaids" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{bridesmaid.name}}</h5>
+              <small>{{bridesmaid.title}}</small>
+            </div>
+            <p class="mb-1">{{bridesmaid.description}}</p>
+            <small>Currently resides in {{bridesmaid.livesIn}}.</small>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="card sub-title">
-        <h2 class="text-center">Tom's Groomsmen</h2>
-        <div *ngFor="let groomsman of groomsmen">
-          <hr>
-          <h3>{{groomsman.name}}</h3>
-          <h4>{{groomsman.title}}</h4>
-          <!-- <p>{{groomsman.description}}</p> -->
+        <h2 class="text-center title">Tom's Groomsmen</h2>
+        <div class="list-group">
+          <div *ngFor="let groomsman of groomsmen" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{groomsman.name}}</h5>
+              <small>{{groomsman.title}}</small>
+            </div>
+            <p class="mb-1">{{groomsman.description}}</p>
+            <small>Currently resides in {{groomsman.livesIn}}.</small>
+          </div>
         </div>
       </div>
     </div>

@@ -20,7 +20,7 @@ export class OurStoryComponent implements OnInit {
 
   pagePieces: PagePiece[] = [
     new DatePagePiece(new Date('02/01/2013')),
-    new TextPagePiece(new Date('02/08/2013'), 'Our Story begins...', `<p>Tom and Morgan meet while students at the University of Minnesota.</p><img class="img-fluid center-img" src=${this.firstTexts}>`),
+    new TextPagePiece(new Date('02/08/2013'), 'Our Story begins...', `<p>Tom and Morgan meet as students at the University of Minnesota.</p><img class="img-fluid center-img" src=${this.firstTexts}>`),
     new TextPagePiece(new Date('02/20/2013'), 'First Date', `<p>They study together at Panera Bread. Morgan hides her nerves intensely prepping for her equine management exam, while Tom is too nervous to study for computer vision.</p><img class="short-img img-fluid" src=${this.panera}>`).flip(),
     new TextPagePiece(new Date('02/22/2013'), 'First "Real" Date', `<p>Tom treats Morgan to a romantic dinner at Loring Pasta Bar, and later they shared their first kiss.</p><img class="short-img img-fluid" src=${this.loring}>`),
     new DatePagePiece(new Date('03/01/2013')),
@@ -29,7 +29,7 @@ export class OurStoryComponent implements OnInit {
     new DatePagePiece(new Date('05/01/2013')),
     new TextPagePiece(new Date('05/24/2013'), 'I love you!', 'Tom and Morgan first say "I love you."' + `<img src="${this.us}" class="img-fluid center-img">`).flip(),
     new DatePagePiece(new Date('11/01/2016')),
-    new TextPagePiece(new Date('11/05/2016'), 'Tom Proposes', 'Tom proposed to Morgan while in Washington DC, under the guise of visiting Morgan’s sister Killian at college, in front of the Thomas Jefferson Memorial.'),
+    new TextPagePiece(new Date('11/05/2016'), 'Tom Proposes', 'Tom proposes to Morgan in front of the Thomas Jefferson Memorial, while in Washington DC visiting Morgan’s sister Killian.'),
   ];
   constructor() {
     const today = new Date();

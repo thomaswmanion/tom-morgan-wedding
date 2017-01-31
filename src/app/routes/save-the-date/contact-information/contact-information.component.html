@@ -3,7 +3,6 @@
     <div class="form-group" [ngClass]="{'has-error':!contactInformationForm.controls.names.valid && contactInformationForm.controls.names.touched}">
       <label for="names">Name(s)</label>
       <input formControlName="names" type="text" id="names" class="form-control" required autofocus>
-      <small id="namesHelper" class="text-muted">List all family members, comma separated.</small>
     </div>
     
     <div class="form-group" [ngClass]="{'has-error':!contactInformationForm.controls.houseAddress.valid && contactInformationForm.controls.houseAddress.touched}">
