@@ -29,16 +29,6 @@ export const appRoutes: Routes = [
         }
     },
     {
-        path: 'venue-lodging',
-        component: VenueLodgingComponent,
-        data: {
-            menu: {
-                title: 'Venue & Lodging',
-                icon: 'fa fa-fire'
-            }
-        }
-    },
-    {
         path: 'story',
         component: OurStoryComponent,
         data: {
@@ -58,6 +48,16 @@ export const appRoutes: Routes = [
             }
         }
     },
+    {
+        path: 'venue-lodging',
+        component: VenueLodgingComponent,
+        data: {
+            menu: {
+                title: 'Venue & Lodging',
+                icon: 'fa fa-fire'
+            }
+        }
+    },
     /*{
         path: 'photos',
         component: PhotosComponent,
@@ -69,17 +69,6 @@ export const appRoutes: Routes = [
         }
     },*/
     {
-        path: 'rsvp',
-        //component: RsvpComponent,
-        component: ComingSoonComponent,
-        data: {
-            menu: {
-                title: 'RSVP',
-                icon: 'fa fa-envelope-o'
-            }
-        }
-    },
-    {
         path: 'registry-information',
         component: ComingSoonComponent,
         //component: RegistryInformationComponent,
@@ -87,6 +76,17 @@ export const appRoutes: Routes = [
             menu: {
                 title: 'Registry Information',
                 icon: 'fa fa-shopping-cart'
+            }
+        }
+    },
+    {
+        path: 'rsvp',
+        //component: RsvpComponent,
+        component: ComingSoonComponent,
+        data: {
+            menu: {
+                title: 'RSVP',
+                icon: 'fa fa-envelope-o'
             }
         }
     },

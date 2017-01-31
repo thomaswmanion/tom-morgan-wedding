@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SaveTheDateComponent implements OnInit {
   std: string = require('./Save-the-Date.jpg');
-  
+  event: string = require('file-loader?name=[name].[ext]!!./MacDonald-Manion-Wedding.ics');
+
   constructor() { }
 
   ngOnInit() {
