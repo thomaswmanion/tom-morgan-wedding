@@ -13,7 +13,7 @@ import { UserState } from './user.state';
   providers: [UserState]
 })
 export class AppComponent {
-  weddingBanner: string = require('./Wedding Banner v2.png');
+  weddingBanner: string = require('./Wedding-Banner-v2.png');
   public isMenuCollapsed: boolean;
   public isLoggedIn: boolean = false;
   public route: string;

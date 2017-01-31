@@ -34,7 +34,7 @@
     display: block;
     z-index: 11;
     position: relative;
-    max-height: 230px;
+    max-height: 161px;
 }
 @media (min-width: $resXS + 1) {
   .top {
@@ -44,7 +44,7 @@
   }
   .the-morgan-line {
     position: absolute;
-    top: 130px;
+    top: 100px;
     width: 100%;
     color: $maroon;
     z-index: 1;
