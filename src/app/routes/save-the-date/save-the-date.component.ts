@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./save-the-date.component.scss']
 })
 export class SaveTheDateComponent implements OnInit {
-  std: string = require('./Save the Date 3.jpg');
+  std: string = require('./Save-the-Date.jpg');
   
   constructor() { }
 
