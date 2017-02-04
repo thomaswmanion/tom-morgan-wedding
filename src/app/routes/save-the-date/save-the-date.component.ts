@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./save-the-date.component.scss']
 })
 export class SaveTheDateComponent implements OnInit {
-  std: string = require('./Save-the-Date.jpg');
+  std: string = require('file-loader?name=[name].[ext]!!./Save-the-Date.jpg');
   signature: string = require('file-loader?name=[name].[ext]!!./signature.gif');
   event: string = require('file-loader?name=[name].[ext]!!./MacDonald-Manion-Wedding.ics');
 
