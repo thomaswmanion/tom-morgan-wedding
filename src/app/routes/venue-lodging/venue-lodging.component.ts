@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./venue-lodging.component.scss']
 })
 export class VenueLodgingComponent implements OnInit {
-  keylime: string = require('./KeyLime-Cove-Exterior.jpg');
+  holidayInn: string = require('./holiday-inn.jpg');
   marybud: string = require('./marybud-dogs.jpg');
 
   constructor() { }
