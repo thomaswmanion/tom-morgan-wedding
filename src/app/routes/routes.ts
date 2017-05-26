@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { SaveTheDateComponent } from './save-the-date/save-the-date.component';
+import { FaqComponent } from "./faq/faq.component";
 
 export const appRoutes: Routes = [
     {
@@ -45,6 +46,16 @@ export const appRoutes: Routes = [
             menu: {
                 title: 'Bridal Party',
                 icon: 'fa fa-users'
+            }
+        }
+    },
+    {
+        path: 'faq',
+        component: FaqComponent,
+        data: {
+            menu: {
+                title: "FAQ's",
+                icon: 'fa fa-question'
             }
         }
     },
