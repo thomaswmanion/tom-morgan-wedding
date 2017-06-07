@@ -1,6 +1,10 @@
 {
   "rules": {
     ".read": "auth != null",
-    ".write": "true"
+    ".write": "true",
+    "rsvps": {
+      ".read": "true",
+      ".write": "true"
+    }
   }
 }

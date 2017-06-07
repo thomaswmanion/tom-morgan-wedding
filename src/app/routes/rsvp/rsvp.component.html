@@ -1,7 +1,75 @@
-<div class="card head-title">
-  <h1>RSVP</h1>
-</div>
+<div class="container">
+  <div class="header">
+    <h1>RSVP</h1>
+  </div>
+  <br>
+  <div id="rsvp-body">
+    <p>Please enter your guest code below.</p>
+    <div class="form-group">
+      <label for="guest-code">Guest Code</label>
+      <input [disabled]="isCodeDisabled" maxlength="5" type="text" (keyup)="checkCode()" [(ngModel)]="guestCode" class="form-control" id="guest-code" aria-describedby="guest-code-help"
+        placeholder="Enter code here.">
+      <small id="guest-code-help" class="form-text">You can find this on your invitation.</small>
+    </div>
+    <div *ngIf="rsvp">
+      <p>Your invitation was found! Please fill out the following and press save.</p>
+      <div class="form-group" *ngFor="let guest of rsvp.rsvpGuests; let i = index">
+        <label>Guest {{i + 1}}</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input placeholder="Name" [(ngModel)]="guest.name" class="form-control" />
+            <small class="form-text">Name of Guest {{i + 1}}</small>
+          </div>
+          <div class="col-md-6 full-width">
+            <button (click)="guest.isGoing = true" [class.selected]="guest.isGoing" class="btn rsvp-btn">Attending</button>
+            <button (click)="guest.isGoing = false" [class.not-selected]="!guest.isGoing" class="btn rsvp-btn">Not Attending</button>
+          </div>
+        </div>
+        <hr>
+      </div>
 
-<div class="card sub-title">
-  <h2>TBD</h2>
+      <!-- Hotel -->
+      <article class="row">
+        <div class="col-md-6">
+          <p>Are you planning on staying at the hotel?</p>
+        </div>
+        <div class="col-md-6 full-width">
+          <button (click)="rsvp.isAtHotel = true" [class.selected]="rsvp.isAtHotel" class="btn rsvp-btn">Yes</button>
+          <button (click)="rsvp.isAtHotel = false" [class.not-selected]="!rsvp.isAtHotel" class="btn rsvp-btn">No</button>
+        </div>
+      </article>
+
+      <hr>
+
+      <!-- Parking -->
+      <article class="row">
+        <div class="col-md-6">
+          <p>Are you planning on parking at the farm?</p>
+        </div>
+        <div class="col-md-6 full-width">
+          <button (click)="rsvp.isParking = true" [class.selected]="rsvp.isParking" class="btn rsvp-btn">Yes</button>
+          <button (click)="rsvp.isParking = false" [class.not-selected]="!rsvp.isParking" class="btn rsvp-btn">No</button>
+        </div>
+      </article>
+
+      <hr>
+
+      <!-- Cars -->
+      <article class="row">
+        <div class="col-md-6">
+          <p>How many cars are you bringing?</p>
+        </div>
+        <div class="col-md-6 full-width">
+          <input type="number" placeholder="# of Cars" [(ngModel)]="rsvp.numberOfCarsParking" class="form-control" />
+        </div>
+      </article>
+
+      <hr>
+
+      <button (click)="update()" class="btn btn-lg btn-primary btn-block">Save</button>
+      <br>
+      <div class="status-box" [style.background-color]="statusColor">{{status}}</div>
+    </div>
+  </div>
+
 </div>

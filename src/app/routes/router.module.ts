@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule, FormGroupDirective, FormControlDirective } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormGroupDirective, FormControlDirective } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
@@ -20,6 +20,7 @@ const declarations = appRoutes.map(r => r.component).concat([KeyFormComponent, L
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyAE0MrM-Pcgtm_FUfIWtUg5rQfXQZ1z6WI'
         }),
+        FormsModule,
         ReactiveFormsModule
     ],
     providers: [

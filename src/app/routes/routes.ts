@@ -102,6 +102,10 @@ export const appRoutes: Routes = [
         }
     },
     {
+        path: 'rsvp-beta',
+        component: RsvpComponent
+    },
+    {
         path: 'save-the-date',
         component: SaveTheDateComponent/*,
         data: {

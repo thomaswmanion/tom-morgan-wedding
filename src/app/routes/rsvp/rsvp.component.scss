@@ -1,0 +1,53 @@
+.header {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#rsvp-body {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid white;
+    padding: 15px;
+}
+
+#guest-code-help {
+    color: darken(white, 20%);
+}
+
+#guest-code {
+    max-width: 200px;
+}
+
+.full-width {
+    width: 100%;
+    display: flex;
+}
+
+.rsvp-btn {
+    cursor: pointer;
+    width: 50%;
+    background-color: lighten(black, 15%);
+    color: darken(white, 15%);
+    font-weight: bold;
+}
+
+
+.not-selected {
+    background-color: darken(blue, 20%);
+    border-color: blue;
+}
+
+.selected {
+    background-color: darken(green, 10%);
+    border-color: green;
+}
+
+.status-box {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+}
