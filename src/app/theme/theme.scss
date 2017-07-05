@@ -10,14 +10,17 @@ body {
     padding: 0px;
     //background-image: url('./leather.png');
     //background-image: url('./yellow-bg.jpg');
-    background: $blue;
+    background: $paper-bag;
     background-repeat: repeat;
-    color: $text-color;
+    color: lighten($text-color, 15%);
 }
 
 .card {
-    color: $maroon;
-    padding: 5px;
+    color: black;
+    padding: 10px;
+    h1,h2,h3,h4,h5 {
+        color: $maroon;
+    }
 }
 
 .text-center {

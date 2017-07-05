@@ -1,3 +1,4 @@
+import { WeddingDayComponent } from './wedding-day/wedding-day.component';
 import { Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
@@ -50,21 +51,21 @@ export const appRoutes: Routes = [
         }
     },
     {
-        path: 'faq',
-        component: FaqComponent,
+        path: 'wedding-day',
+        component: WeddingDayComponent,
         data: {
             menu: {
-                title: "FAQ's",
-                icon: 'fa fa-question'
+                title: "Our Wedding Day!",
+                icon: 'fa fa-heart'
             }
         }
     },
     {
-        path: 'venue-lodging',
+        path: 'hotel-transport',
         component: VenueLodgingComponent,
         data: {
             menu: {
-                title: 'Venue & Lodging',
+                title: 'Hotel & Travel',
                 icon: 'fa fa-fire'
             }
         }
@@ -81,8 +82,8 @@ export const appRoutes: Routes = [
     },*/
     {
         path: 'registry-information',
-        component: ComingSoonComponent,
-        //component: RegistryInformationComponent,
+        //component: ComingSoonComponent,
+        component: RegistryInformationComponent,
         data: {
             menu: {
                 title: 'Registry Information',
@@ -98,6 +99,16 @@ export const appRoutes: Routes = [
             menu: {
                 title: 'RSVP',
                 icon: 'fa fa-envelope-o'
+            }
+        }
+    },
+    {
+        path: 'faq',
+        component: FaqComponent,
+        data: {
+            menu: {
+                title: "FAQ",
+                icon: 'fa fa-question'
             }
         }
     },

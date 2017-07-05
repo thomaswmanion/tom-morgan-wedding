@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="header">
+    <h1>Our Wedding Day!</h1>
+  </div>
+
+  <br>
+
+  <div class="card">
+    <h2>September 2nd, 2017</h2>
+    <ul>
+      <li *ngFor="let e of events">{{e.time}} {{e.description}}</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <div class="card sub-title">
+        <h3 class="block text-center">Ceremony &amp; Reception</h3>
+        <h2 class="script font-size text-center">MaryBud Farm</h2>
+
+        <p class="card-text text-center block description">
+          <strong>Antioch, IL</strong>
+        </p>
+
+        <img class="img-fluid" src="{{marybud}}">
+
+        <p class="card-text description pad">
+          MaryBud Farms was established in 2015 by Morgan’s parents, Mark and Maril MacDonald, to preserve the legacy of a place for
+          family and friends to gather. It's named in memory of Morgan’s grandparents, "Bud" and Mary Gagen.
+
+          <br><br> The property is about creating a community around what’s possible and where we’re going, rooted in the
+          core values of key people in our lives. This makes "the farm" a natural destination for us to start our lives together,
+          surrounded by the community that has played an integral part of who we are.
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <div class="card">
+        <h3 class="block text-center">Attire</h3>
+        <p>{{attire}}</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>

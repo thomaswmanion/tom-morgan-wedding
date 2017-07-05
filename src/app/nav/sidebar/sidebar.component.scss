@@ -38,7 +38,7 @@
   float: none;
   padding: 0;
   &.selected:not(.with-sub-menu) {
-    background-color: $primary;
+    background-color: $paper-bag;
     a.al-sidebar-list-link {
       color: $sidebar-text;
       b {

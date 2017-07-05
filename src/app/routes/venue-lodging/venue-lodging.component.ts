@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VenueLodgingComponent implements OnInit {
   holidayInn: string = require('./holiday-inn.jpg');
-  marybud: string = require('./marybud-dogs.jpg');
 
   constructor() { }
 

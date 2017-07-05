@@ -4,13 +4,19 @@
   </div>
   <br>
   <div id="rsvp-body">
-    <p>Please enter your guest code below.</p>
-    <div class="form-group">
+    <p *ngIf="!rsvp">Please enter your guest code below.</p>
+    <div *ngIf="!rsvp" class="form-group">
       <label for="guest-code">Guest Code</label>
-      <input [disabled]="isCodeDisabled" maxlength="5" type="text" (keyup)="checkCode()" [(ngModel)]="guestCode" class="form-control" id="guest-code" aria-describedby="guest-code-help"
-        placeholder="Enter code here.">
+      <div class="input-group">
+        <input [disabled]="isCodeDisabled" maxlength="5" type="text" [(ngModel)]="guestCode" class="form-control"
+          id="guest-code" aria-describedby="guest-code-help" placeholder="Enter code here.">
+        <span class="input-group-btn">
+        <button [disabled]="guestCode.length === 5 ? '' : 'disabled'" (click)="checkCode()" class="btn btn-secondary" type="button">{{searchText}}</button>
+      </span>
+      </div>
       <small id="guest-code-help" class="form-text">You can find this on your invitation.</small>
     </div>
+    <p *ngIf="!rsvp">Lost your code? Please email Morgan and Tom at tom.morgan.manion@gmail.com to get your code.</p>
     <div *ngIf="rsvp">
       <p>Your invitation was found! Please fill out the following and press save.</p>
       <div class="form-group" *ngFor="let guest of rsvp.rsvpGuests; let i = index">

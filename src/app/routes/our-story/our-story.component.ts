@@ -15,7 +15,7 @@ export class OurStoryComponent implements OnInit {
   tomFlash: string = require('./tom-flash.jpg');
   startDating: string = require('./tomfbreal.jpg');
   us: string = require('./us.jpg');
-  usChristmas: string = require('./us-christmas.jpg');
+  usChristmas: string = require('./us-4th.jpg');
   champagne: string = require('./champagne.jpg');
 
   pagePieces: PagePiece[] = [

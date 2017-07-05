@@ -15,13 +15,14 @@ import { Subscription } from "rxjs/Subscription";
 export class RsvpComponent implements OnInit {
   public userProfileObs: FirebaseObjectObservable<any>;
   public lastGuestCode: string;
-  public guestCode: string;
+  public guestCode: string = '';
   public rsvpObs: FirebaseObjectObservable<RSVP>;
   public rsvp: RSVP;
   public sub: Subscription;
   public statusColor: string = '';
   public status: string = '';
   public isCodeDisabled: boolean = false;
+  public searchText: string = 'Search';
 
   constructor(
     public af: AngularFire
@@ -30,13 +31,22 @@ export class RsvpComponent implements OnInit {
   ngOnInit() {
   }
 
-  checkCode(): void {
-    this.reset();
-    if (this.isValidCode()) {
-      this.lookupCode();
-    }
+  async checkCode() {
+    this.searchText = 'Searching...';
     if (this.guestCode && this.guestCode.length > 5) {
       this.guestCode = this.guestCode.substring(0, 5);
+    }
+    if (this.isValidCode()) {
+      try {
+        await this.lookupCode();
+      }
+      catch (e) {
+        this.searchText = 'Search';
+      }
+
+    }
+    else {
+      this.searchText = 'Search';
     }
     this.lastGuestCode = this.guestCode;
   }
@@ -56,9 +66,10 @@ export class RsvpComponent implements OnInit {
   async lookupCode() {
     this.reset();
     const rsvpObj = this.af.database.object(`/rsvps/${this.guestCode}`)
+    console.log('here', rsvpObj);
     //rsvpObj.update(createDummy());
     this.sub = rsvpObj.subscribe(obj => {
-      
+
       if (obj.$exists && obj.$exists()) {
         this.rsvpObs = rsvpObj;
         this.rsvp = RSVP.parse(obj);
@@ -85,7 +96,7 @@ export class RsvpComponent implements OnInit {
     this.statusColor = 'red';
     this.status = 'Error...';
   }
-  
+
   update(): void {
     this.setSaving();
     this.rsvp.numSaves++;

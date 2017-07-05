@@ -23,7 +23,7 @@ export class BridalPartyComponent implements OnInit {
     new PartyMember('Brian Manion', 'Co-Best Man', 'Older Brother and Brother Friend. ', 'New Orleans, LA'),
     new PartyMember('Drew Haefner', 'Groomsman', 'College Roommate and Sports Friend. ', 'Duluth, MN'),
     new PartyMember('Stefan Platikanov', 'Groomsman', 'College Classmate and Gaming Friend.', 'Minneapolis, MN'),
-    new PartyMember('Akersh Srivastava', 'Groomsman', 'Accenture Colleague and Tech Happenings Friend.', 'Seattle, WA'),
+    new PartyMember('Akersh Srivastava', 'Groomsman', 'Colleague and Tech Happenings Friend.', 'Seattle, WA'),
     new PartyMember('Kevin Tesch', 'Groomsman', 'High School and German Aficionado Friend.', 'Mukwonago, WI')
   ];
   constructor() { }

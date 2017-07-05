@@ -17,8 +17,24 @@
     color: darken(white, 20%);
 }
 
+$bc: lighten(black, 25%);
 #guest-code {
     max-width: 200px;
+    border-left: 1px solid $bc;
+    border-bottom: 1px solid $bc;
+    border-top: 1px solid $bc;
+}
+
+.input-group-btn {
+    border-right: 1px solid $bc;
+    border-bottom: 1px solid $bc;
+    border-top: 1px solid $bc;
+    button {
+        border: 0;
+        &:enabled {
+            cursor: pointer;
+        }
+    }
 }
 
 .full-width {
@@ -33,7 +49,6 @@
     color: darken(white, 15%);
     font-weight: bold;
 }
-
 
 .not-selected {
     background-color: darken(blue, 20%);

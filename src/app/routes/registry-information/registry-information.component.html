@@ -1,9 +1,13 @@
-<div class="card head-title">
-  <h1>Registry Information</h1>
-</div>
+<div class="container">
+  <div class="header">
+    <h1>Registry Information</h1>
+  </div>
+  <p>Morgan and Tom are registered at the following locations. Please click below to follow to the respective websites.</p>
+  <div class="row">
+    <div (click)="window.location.href = rl.link;" class="registered-location col-sm-12 col-md-6" *ngFor="let rl of registeredLocations">
+      <img [src]="rl.img" />
+    </div>
+  </div>
 
-<div class="card sub-title" style="text-align: center; margin: 0 auto;">
-  <h2>Under Construction...</h2>
-  <h2>We're still making this baby!</h2>
-  <img class="img-fluid" src="http://media.mnn.com/assets/images/2016/01/cute-baby.jpg.838x0_q80.jpg">
+  <br>
 </div>
