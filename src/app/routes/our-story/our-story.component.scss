@@ -19,18 +19,18 @@
   bottom: 0;
   position: absolute;
   content: " ";
-  width: 3px;
-  background-color: #eee;
+  width: 2px;
+  background-color: $yellow;
   left: 50%;
-  margin-left: -1.5px;
+  margin-left: 0px;
 }
 
 .tldate {
   display: block;
   width: 200px;
-  background: $yellow;
-  border: 3px solid darken($yellow, 10%);
-  color: #ededed;
+  background: white;
+  border: 6px double $yellow;
+  color: $maroon;
   margin: 0 auto;
   padding: 3px 0;
   font-weight: bold;
@@ -61,7 +61,7 @@
   width: 46%;
   float: left;
   background: #fff;
-  border: 2px solid $blue;
+  border: 2px solid lighten($blue, 25%);
   padding: 20px;
   position: relative;
   -webkit-border-radius: 8px;
@@ -76,11 +76,11 @@
 .timeline li .timeline-panel:before {
   position: absolute;
   top: 26px;
-  right: -15px;
+  right: -17px;
   display: inline-block;
   border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
+  border-left: 15px solid lighten($blue, 25%);
+  border-right: 0 solid lighten($blue, 25%);
   border-bottom: 15px solid transparent;
   content: " ";
 }
@@ -110,7 +110,7 @@
 .timeline li.timeline-inverted .timeline-panel:before {
   border-left-width: 0;
   border-right-width: 15px;
-  left: -15px;
+  left: -17px;
   right: auto;
 }
 
@@ -128,18 +128,18 @@
   top: 23px;
   left: 50%;
   text-align: center;
-  background: $maroon;
+  background: white;
   color: #fff;
   width: 35px;
   height: 35px;
   line-height: 35px;
   margin-left: -16px;
-  border: 3px solid white;
+  border: 6px double $yellow;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
-  z-index: 100;
+  z-index: 0;
 }
 
 
@@ -148,6 +148,8 @@
 .tl-heading h4 {
   margin: 0;
   color: $maroon;
+  font-family: Rochester;
+  font-size: 2em;
 }
 .tl-body {
     color: black;

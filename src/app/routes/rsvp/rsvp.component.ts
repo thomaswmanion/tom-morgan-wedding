@@ -66,7 +66,6 @@ export class RsvpComponent implements OnInit {
   async lookupCode() {
     this.reset();
     const rsvpObj = this.af.database.object(`/rsvps/${this.guestCode}`)
-    console.log('here', rsvpObj);
     //rsvpObj.update(createDummy());
     this.sub = rsvpObj.subscribe(obj => {
 
@@ -74,10 +73,10 @@ export class RsvpComponent implements OnInit {
         this.rsvpObs = rsvpObj;
         this.rsvp = RSVP.parse(obj);
         this.isCodeDisabled = true;
-        console.log(this.rsvp);
       }
       else {
         this.sub.unsubscribe();
+        this.searchText = 'Search';
       }
     });
   }

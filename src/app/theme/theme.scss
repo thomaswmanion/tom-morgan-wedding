@@ -10,9 +10,9 @@ body {
     padding: 0px;
     //background-image: url('./leather.png');
     //background-image: url('./yellow-bg.jpg');
-    background: $paper-bag;
+    background: url('./repeatable.jpg');
     background-repeat: repeat;
-    color: lighten($text-color, 15%);
+    color: lighten(black, 5%);
 }
 
 .card {
@@ -64,4 +64,11 @@ body {
 @font-face {
   font-family: 'Rochester';
   src: url('./fonts/Rochester-Regular.ttf');
+}
+
+.splitter {
+    border-bottom: 4px double $yellow;
+    width: 100%;
+    margin-top: -5px;
+    margin-bottom: 5px;
 }

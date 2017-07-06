@@ -13,6 +13,7 @@
   background-color: $sidebar;
   height: 100%;
   position: fixed;
+  border-right: 3px double $yellow;
 }
 
 .al-sidebar-list {
@@ -38,7 +39,7 @@
   float: none;
   padding: 0;
   &.selected:not(.with-sub-menu) {
-    background-color: $paper-bag;
+    background-color: $yellow;
     a.al-sidebar-list-link {
       color: $sidebar-text;
       b {

@@ -1,4 +1,4 @@
-<div class="container">
+<div id="rsvp" class="container">
   <div class="header">
     <h1>RSVP</h1>
   </div>
@@ -27,8 +27,8 @@
             <small class="form-text">Name of Guest {{i + 1}}</small>
           </div>
           <div class="col-md-6 full-width">
-            <button (click)="guest.isGoing = true" [class.selected]="guest.isGoing" class="btn rsvp-btn">Attending</button>
-            <button (click)="guest.isGoing = false" [class.not-selected]="!guest.isGoing" class="btn rsvp-btn">Not Attending</button>
+            <button (click)="guest.isGoing = true" [class.selected]="guest.isGoing" class="btn rsvp-btn">Can't Wait!</button>
+            <button (click)="guest.isGoing = false" [class.not-selected]="!guest.isGoing" class="btn rsvp-btn">Regretfully Decline</button>
           </div>
         </div>
         <hr>
