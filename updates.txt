@@ -1,0 +1,14 @@
+TODO
+
+Error message on no results
+match upper or lowercase
+Make black buttons #999 with dark grey text
+All selected colors be maroon with gold text
+Get rid of top name label (i.e. Guest 1)
+Get rid of "Name of Guest #"
+"Please enter guest's name above" if contains guest or blank
+"I / We will be staying at the hotel and taking the provided shuttle"
+I / We will be driving to MaryBud Farm. (Note: Limited parking will be along Edwards Rd. See map.)
+
+Our Wedding Day - Add Map and where valet will be
+
