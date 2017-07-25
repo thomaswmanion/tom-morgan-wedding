@@ -116,9 +116,3 @@ export class RsvpComponent implements OnInit {
     return !guestName || guestName.toLowerCase().indexOf('guest') !== -1;
   }
 }
-
-function createDummy(): RSVP {
-  const rsvp = new RSVP();
-  rsvp.rsvpGuests.push(new RSVPGuest('Tom'), new RSVPGuest(''));
-  return rsvp;
-}

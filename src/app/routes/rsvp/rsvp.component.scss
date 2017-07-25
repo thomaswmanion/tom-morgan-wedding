@@ -1,5 +1,4 @@
 @import "../../theme/theme-variables";
-
 #rsvp {
     color: black;
 }
@@ -58,11 +57,15 @@ $bc: lighten(black, 25%);
     font-weight: bold;
     padding-left: 0;
     padding-right: 0;
-}
-
-.not-selected {
     
 }
+
+.btn-group {
+    max-height: 75px;
+    margin: auto auto;
+}
+
+.not-selected {}
 
 .selected {
     background-color: $maroon;

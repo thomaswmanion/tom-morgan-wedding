@@ -20,11 +20,14 @@
     <p *ngIf="!rsvp">Lost your code? Please email Morgan and Tom at tom.morgan.manion@gmail.com to get your code.</p>
     <div *ngIf="rsvp">
       <p>Your invitation was found! Please fill out the following and press save.</p>
+      <p>Help us ensure we have the most up-to-date contact information for everyone as we keep our list up-to-date!</p>
       <div class="form-group" *ngFor="let guest of rsvp.rsvpGuests; let i = index">
         <div class="row">
           <div class="col-md-5">
             <input placeholder="Name" [(ngModel)]="guest.name" class="form-control" />
             <small *ngIf="isEmptyOrGuest(guest.name)" class="form-text">Please enter the guest's name above.</small>
+            <input placeholder="Email Address" [(ngModel)]="guest.email" class="form-control" />
+            <input placeholder="Phone Number" [(ngModel)]="guest.phoneNumber" class="form-control" />
           </div>
           <div class="col-md-7 full-width btn-group">
             <button (click)="guest.isGoing = true" [class.selected]="guest.isGoing" class="btn rsvp-btn">Can't<br>Wait!</button>
@@ -47,8 +50,6 @@
         </div>
       </article>
 
-      <hr>
-
       <!-- Parking -->
       <article class="row">
         <div class="col-md-6">
@@ -60,8 +61,6 @@
           <button (click)="rsvp.isParking = undefined" [class.selected]="rsvp.isParking === undefined" class="btn rsvp-btn">No<br>Response</button>
         </div>
       </article>
-
-      <hr>
 
       <!-- Cars -->
       <article class="row">
@@ -75,9 +74,21 @@
 
       <hr>
 
+      <!-- Pool Party -->
+      <article class="row">
+        <div class="col-md-6">
+          <p>Will you join us for a Post-Wedding BBQ/Pool Party @ 3p Sunday at the MacDonald's house in Lake Forest?</p>
+        </div>
+        <div class="col-md-6 full-width">
+          <p># Attending: <input type="number" [(ngModel)]="rsvp.numberAttendingPoolParty" class="form-control" id="num-attending-pool-party" placeholder="0"></p>
+        </div>
+      </article>
+
+      <hr>
+
       <!-- Notes -->
       <div class="form-group">
-        <label for="notes">Notes</label>
+        <label for="notes">Leave a note for the Bride &amp; Groom!</label>
         <textarea [(ngModel)]="rsvp.notes" id="notes" class="form-control" rows="3"></textarea>
       </div>
 

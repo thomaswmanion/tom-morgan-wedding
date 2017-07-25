@@ -5,6 +5,7 @@ export class RSVP {
     isAtHotel: boolean = undefined;
     isParking: boolean = undefined;
     numberOfCarsParking: number = 0;
+    numberAttendingPoolParty: number = 0;
 
     static parse(r: RSVP): RSVP {
         const rsvp = new RSVP();
@@ -18,6 +19,9 @@ export class RSVP {
         rsvp.isParking = r.isParking;
         rsvp.numSaves = r.numSaves || 0;
         rsvp.numberOfCarsParking = r.numberOfCarsParking;
+        if (r.numberAttendingPoolParty) {
+            rsvp.numberAttendingPoolParty = r.numberAttendingPoolParty;
+        }
         return rsvp;
     }
 
@@ -29,13 +33,15 @@ export class RSVP {
 export class RSVPGuest {
     public isGoing: boolean
     constructor(
-        public name: string
+        public name: string,
+        public phoneNumber: string,
+        public email: string
     ) {
 
     }
 
     static parse(r: RSVPGuest): RSVPGuest {
-        const rg = new RSVPGuest(r.name);
+        const rg = new RSVPGuest(r.name, r.phoneNumber, r.email);
         if (r.isGoing) {
             rg.isGoing = r.isGoing;
         }
