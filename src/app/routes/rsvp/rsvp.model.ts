@@ -1,14 +1,18 @@
 export class RSVP {
+    notes: string = '';
     numSaves: number = 0;
     rsvpGuests: RSVPGuest[] = [];
-    isAtHotel: boolean = false;
-    isParking: boolean = false;
+    isAtHotel: boolean = undefined;
+    isParking: boolean = undefined;
     numberOfCarsParking: number = 0;
 
     static parse(r: RSVP): RSVP {
         const rsvp = new RSVP();
-        if (rsvp.rsvpGuests) {
+        if (r.rsvpGuests) {
             rsvp.rsvpGuests = r.rsvpGuests.map(g => RSVPGuest.parse(g));
+        }
+        if (r.notes) {
+            rsvp.notes = r.notes;
         }
         rsvp.isAtHotel = r.isAtHotel;
         rsvp.isParking = r.isParking;
@@ -16,17 +20,25 @@ export class RSVP {
         rsvp.numberOfCarsParking = r.numberOfCarsParking;
         return rsvp;
     }
+
+    cleanse(): any {
+        return JSON.parse(JSON.stringify(this));
+    }
 }
 
 export class RSVPGuest {
+    public isGoing: boolean
     constructor(
-        public name: string,
-        public isGoing: boolean
+        public name: string
     ) {
 
     }
 
     static parse(r: RSVPGuest): RSVPGuest {
-        return new RSVPGuest(r.name, r.isGoing);
+        const rg = new RSVPGuest(r.name);
+        if (r.isGoing) {
+            rg.isGoing = r.isGoing;
+        }
+        return rg;
     }
 }

@@ -23,6 +23,7 @@ export class RsvpComponent implements OnInit {
   public status: string = '';
   public isCodeDisabled: boolean = false;
   public searchText: string = 'Search';
+  public noResultsText: string = '';
 
   constructor(
     public af: AngularFire
@@ -36,17 +37,20 @@ export class RsvpComponent implements OnInit {
     if (this.guestCode && this.guestCode.length > 5) {
       this.guestCode = this.guestCode.substring(0, 5);
     }
+    this.guestCode = this.guestCode.toUpperCase();
     if (this.isValidCode()) {
       try {
         await this.lookupCode();
       }
       catch (e) {
         this.searchText = 'Search';
+        this.noResultsText = 'No results. Make sure you typed the code correctly!';
       }
 
     }
     else {
       this.searchText = 'Search';
+      this.noResultsText = 'No results. Make sure you typed the code correctly!';
     }
     this.lastGuestCode = this.guestCode;
   }
@@ -73,10 +77,12 @@ export class RsvpComponent implements OnInit {
         this.rsvpObs = rsvpObj;
         this.rsvp = RSVP.parse(obj);
         this.isCodeDisabled = true;
+        this.noResultsText = '';
       }
       else {
         this.sub.unsubscribe();
         this.searchText = 'Search';
+        this.noResultsText = 'No results. Make sure you typed the code correctly!';
       }
     });
   }
@@ -99,16 +105,20 @@ export class RsvpComponent implements OnInit {
   update(): void {
     this.setSaving();
     this.rsvp.numSaves++;
-    this.rsvpObs.update(this.rsvp).then(success => {
+    this.rsvpObs.update(this.rsvp.cleanse()).then(success => {
       this.setSaved();
     }, err => {
       this.setError();
     })
   }
+
+  isEmptyOrGuest(guestName: string): boolean {
+    return !guestName || guestName.toLowerCase().indexOf('guest') !== -1;
+  }
 }
 
 function createDummy(): RSVP {
   const rsvp = new RSVP();
-  rsvp.rsvpGuests.push(new RSVPGuest('Tom', false), new RSVPGuest('', false));
+  rsvp.rsvpGuests.push(new RSVPGuest('Tom'), new RSVPGuest(''));
   return rsvp;
 }

@@ -1,7 +1,5 @@
 TODO
 
-Error message on no results
-match upper or lowercase
 Make black buttons #999 with dark grey text
 All selected colors be maroon with gold text
 Get rid of top name label (i.e. Guest 1)

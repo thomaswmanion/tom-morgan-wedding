@@ -1,3 +1,13 @@
+import { CountdownComponent } from './../countdown/countdown.component';
+import { LogoutComponent } from './logout/logout.component';
+import { SaveTheDateComponent } from './save-the-date/save-the-date.component';
+import { RsvpComponent } from './rsvp/rsvp.component';
+import { RegistryInformationComponent } from './registry-information/registry-information.component';
+import { VenueLodgingComponent } from './venue-lodging/venue-lodging.component';
+import { BridalPartyComponent } from './bridal-party/bridal-party.component';
+import { OurStoryComponent } from './our-story/our-story.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule, FormGroupDirective, FormControlDirective } from '@angular/forms';
@@ -13,7 +23,6 @@ import { FaqComponent } from './faq/faq.component';
 import { WeddingDayComponent } from './wedding-day/wedding-day.component';
 
 
-const declarations = appRoutes.map(r => r.component).concat([KeyFormComponent, LoginFormComponent, CreateFormComponent, ContactInformationComponent]);
 @NgModule({
     imports: [
         RouterModule.forRoot(appRoutes),
@@ -27,6 +36,23 @@ const declarations = appRoutes.map(r => r.component).concat([KeyFormComponent, L
     providers: [
         FormGroupDirective, FormControlDirective
     ],
-    declarations
+    declarations: [
+        LoginComponent,
+        HomeComponent,
+        OurStoryComponent,
+        BridalPartyComponent,
+        WeddingDayComponent,
+        VenueLodgingComponent,
+        RegistryInformationComponent,
+        RsvpComponent,
+        FaqComponent,
+        SaveTheDateComponent,
+        LogoutComponent,
+        KeyFormComponent,
+        LoginFormComponent,
+        CreateFormComponent,
+        ContactInformationComponent,
+        CountdownComponent
+    ]
 })
 export class AppRouterModule { }

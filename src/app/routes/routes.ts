@@ -6,11 +6,9 @@ import { VenueLodgingComponent } from './venue-lodging/venue-lodging.component';
 import { RegistryInformationComponent } from './registry-information/registry-information.component';
 import { OurStoryComponent } from './our-story/our-story.component';
 import { BridalPartyComponent } from './bridal-party/bridal-party.component';
-//import { PhotosComponent } from './photos/photos.component';
 import { RsvpComponent } from './rsvp/rsvp.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { SaveTheDateComponent } from './save-the-date/save-the-date.component';
 import { FaqComponent } from "./faq/faq.component";
 
@@ -70,19 +68,8 @@ export const appRoutes: Routes = [
             }
         }
     },
-    /*{
-        path: 'photos',
-        component: PhotosComponent,
-        data: {
-            menu: {
-                title: 'Photos',
-                icon: 'fa fa-file-image-o'
-            }
-        }
-    },*/
     {
         path: 'registry-information',
-        //component: ComingSoonComponent,
         component: RegistryInformationComponent,
         data: {
             menu: {
@@ -93,8 +80,7 @@ export const appRoutes: Routes = [
     },
     {
         path: 'rsvp',
-        //component: RsvpComponent,
-        component: ComingSoonComponent,
+        component: RsvpComponent,
         data: {
             menu: {
                 title: 'RSVP',
@@ -111,10 +97,6 @@ export const appRoutes: Routes = [
                 icon: 'fa fa-question'
             }
         }
-    },
-    {
-        path: 'rsvp-beta',
-        component: RsvpComponent
     },
     {
         path: 'save-the-date',

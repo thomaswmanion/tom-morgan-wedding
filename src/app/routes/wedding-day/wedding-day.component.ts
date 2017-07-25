@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeddingDayComponent {
   marybud: string = require('./marybud-dogs.jpg');
+  parkingMap: string = require('./parking.png');
+  googleMapsLink: string = 'https://www.google.com/maps/@42.4816169,-87.969902,509m/data=!3m1!1e3';
   events: DayEvent[] = [
     new DayEvent('4:00p - 4:45p', 'Shuttle from Holiday Inn to MaryBud Farm'),
     new DayEvent('5:00p - 5:30p', 'Ceremony'),

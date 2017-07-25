@@ -10,7 +10,9 @@ export class RegistryInformationComponent {
   window: Window = window;
   registeredLocations: RegisteredLocation[] = [
     new RegisteredLocation('Crate & Barrel', 'https://www.crateandbarrel.com/gift-registry/morgan-macdonald-and-thomas-manion/r5631548', require('./cab.jpg')),
-    new RegisteredLocation('Bed, Bath, and Beyond', bbbLink, require('./bbb.jpg'))
+    new RegisteredLocation('Bed, Bath, and Beyond', bbbLink, require('./bbb.jpg')),
+    new RegisteredLocation('Williams-Sonoma', 'https://www.williams-sonoma.com/registry/ntf85c56xq/registry-list.html', require('./ws.jpg')),
+    new RegisteredLocation('Amazon', 'https://www.amazon.com/wedding/thomas-manion-morgan-macdonald-antioch-september-2017/registry/2FHNVHAP1COGV', require('./awr.png'))
   ];
 }
 
