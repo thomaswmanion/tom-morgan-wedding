@@ -1,0 +1,48 @@
+<legend class="block">Sunday Open House</legend>
+<article class="row">
+  <div class="col-md-6">
+    <p>Will you be attending the open house at Mark and Maril's on Sunday, September 3rd?</p>
+  </div>
+  <div class="col-md-6 full-width">
+    <p># Attending: <input type="number" [(ngModel)]="rsvp.numberAttendingPoolParty" class="form-control" id="num-attending-pool-party"
+        placeholder="0"></p>
+  </div>
+  <div *ngIf="standaloneForm" class="col-md-12">
+    <p>Names: <input [(ngModel)]="rsvp.names" class="form-control" /></p>
+  </div>
+  <div class="col-md-6">
+    <fieldset class="form-group">
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sundayAttendance" id="early" value="early" [(ngModel)]="rsvp.sundayAttendance">
+        We're coming and going early (Approx. 12pm-4pm)
+      </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sundayAttendance" id="late" value="late" [(ngModel)]="rsvp.sundayAttendance">
+        We're coming and going later (Approx. 4pm to 8pm)
+      </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sundayAttendance" id="allDay" value="allDay" [(ngModel)]="rsvp.sundayAttendance">
+        We'll be there for the entire day
+      </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sundayAttendance" id="none" value="none" [(ngModel)]="rsvp.sundayAttendance">
+        We are unable to make it
+      </label>
+      </div>
+    </fieldset>
+  </div>
+
+</article>
+
+<article *ngIf="standaloneForm">
+  <button (click)="save()" class="btn btn-lg btn-primary btn-block" [disabled]="saveDisabled">Save</button>
+  <br>
+  <div class="status-box" [style.background-color]="statusColor">{{status}}</div>
+</article>

@@ -4,20 +4,26 @@
   </div>
   <br>
   <div id="rsvp-body">
-    <p *ngIf="!rsvp">Please enter your guest code below.</p>
-    <div *ngIf="!rsvp" class="form-group">
-      <label for="guest-code">Guest Code</label>
-      <div class="input-group">
-        <input [disabled]="isCodeDisabled" maxlength="5" type="text" [(ngModel)]="guestCode" class="form-control" id="guest-code"
-          aria-describedby="guest-code-help" placeholder="Enter code here.">
-        <span class="input-group-btn">
+    <div *ngIf="!rsvp">
+      <p>Please enter your guest code below to RSVP. You can find this in your invitation.</p>
+      <div class="form-group">
+        <label for="guest-code">Guest Code</label>
+        <div class="input-group">
+          <input [disabled]="isCodeDisabled" maxlength="5" type="text" [(ngModel)]="guestCode" class="form-control" id="guest-code"
+            aria-describedby="guest-code-help" placeholder="Enter code here.">
+          <span class="input-group-btn">
         <button [disabled]="guestCode.length === 5 ? '' : 'disabled'" (click)="checkCode()" class="btn btn-secondary" type="button">{{searchText}}</button>
       </span>
+        </div>
+        <small id="guest-code-help" class="form-text">You can find this on your invitation.</small>
+        <p id="no-results">{{noResultsText}}</p>
       </div>
-      <small id="guest-code-help" class="form-text">You can find this on your invitation.</small>
-      <p id="no-results">{{noResultsText}}</p>
+      <p>Lost your code? Please email Morgan and Tom at tom.morgan.manion@gmail.com to get your code.</p>
+      <hr>
+      <p>Already RSVP'd to the wedding?</p>
+      <tam-sunday-invite></tam-sunday-invite>
+
     </div>
-    <p *ngIf="!rsvp">Lost your code? Please email Morgan and Tom at tom.morgan.manion@gmail.com to get your code.</p>
     <div *ngIf="rsvp">
       <p>Your invitation was found! Please fill out the following and press save.</p>
       <p>Help us ensure we have the most up-to-date contact information for everyone as we keep our list up-to-date!</p>
@@ -74,17 +80,19 @@
 
       <hr>
 
-      <!-- Pool Party
-      <article class="row">
+
+      <!-- Pool Party -->
+      <tam-sunday-invite [rsvp]="rsvp"></tam-sunday-invite>
+      <!-- <article class="row">
         <div class="col-md-6">
           <p>Will you join us for a Post-Wedding BBQ/Pool Party @ 3p Sunday at the MacDonald's house in Lake Forest?</p>
         </div>
         <div class="col-md-6 full-width">
           <p># Attending: <input type="number" [(ngModel)]="rsvp.numberAttendingPoolParty" class="form-control" id="num-attending-pool-party" placeholder="0"></p>
         </div>
-      </article>
+      </article> -->
 
-      <hr> -->
+      <hr>
 
       <!-- Notes -->
       <div class="form-group">

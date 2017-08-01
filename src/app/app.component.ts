@@ -43,7 +43,6 @@ export class AppComponent {
       if (!(evt instanceof NavigationEnd)) {
         return;
       }
-      console.log(evt);
       document.body.scrollTop = 0;
 
       if ($(document).width() <= 500) {

@@ -40,7 +40,6 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
 
   ngOnInit() {
-    console.log('here', this.endDate);
     this.future = new Date(this.endDate);
     this.$counter = Observable.interval(1000).map((x) => {
       this.diff = this.getDiff();

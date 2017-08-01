@@ -21,6 +21,7 @@ import { CreateFormComponent } from './login/create-form/create-form.component';
 import { ContactInformationComponent } from './save-the-date/contact-information/contact-information.component';
 import { FaqComponent } from './faq/faq.component';
 import { WeddingDayComponent } from './wedding-day/wedding-day.component';
+import { SundayInviteComponent } from './rsvp/sunday-invite/sunday-invite.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { WeddingDayComponent } from './wedding-day/wedding-day.component';
         LoginFormComponent,
         CreateFormComponent,
         ContactInformationComponent,
-        CountdownComponent
+        CountdownComponent,
+        SundayInviteComponent
     ]
 })
 export class AppRouterModule { }

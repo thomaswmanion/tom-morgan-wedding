@@ -15,7 +15,7 @@ import { Subscription } from "rxjs/Subscription";
 export class RsvpComponent implements OnInit {
   public userProfileObs: FirebaseObjectObservable<any>;
   public lastGuestCode: string;
-  public guestCode: string = '';
+  public guestCode: string = localStorage.getItem('code') || '';
   public rsvpObs: FirebaseObjectObservable<RSVP>;
   public rsvp: RSVP;
   public sub: Subscription;
@@ -30,6 +30,9 @@ export class RsvpComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    if (this.guestCode) {
+      this.checkCode();
+    }
   }
 
   async checkCode() {
@@ -74,6 +77,7 @@ export class RsvpComponent implements OnInit {
     this.sub = rsvpObj.subscribe(obj => {
 
       if (obj.$exists && obj.$exists()) {
+        // localStorage.setItem('code', this.guestCode);
         this.rsvpObs = rsvpObj;
         this.rsvp = RSVP.parse(obj);
         this.isCodeDisabled = true;

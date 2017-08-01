@@ -1,11 +1,16 @@
-export class RSVP {
+
+export class SundayAttendance {
+    numberAttendingPoolParty: number = 0;
+    sundayAttendance: string = 'none';
+    names: string;
+}
+export class RSVP extends SundayAttendance {
     notes: string = '';
     numSaves: number = 0;
     rsvpGuests: RSVPGuest[] = [];
     isAtHotel: boolean = undefined;
     isParking: boolean = undefined;
     numberOfCarsParking: number = 0;
-    numberAttendingPoolParty: number = 0;
 
     static parse(r: RSVP): RSVP {
         const rsvp = new RSVP();
@@ -21,6 +26,9 @@ export class RSVP {
         rsvp.numberOfCarsParking = r.numberOfCarsParking;
         if (r.numberAttendingPoolParty) {
             rsvp.numberAttendingPoolParty = r.numberAttendingPoolParty;
+        }
+        if (r.sundayAttendance) {
+            rsvp.sundayAttendance = r.sundayAttendance;
         }
         return rsvp;
     }
