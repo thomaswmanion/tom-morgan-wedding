@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wedding-day.component.scss']
 })
 export class WeddingDayComponent {
+  // attire images
+  check: string = require('./check.png');
+  mosquito: string = require('./mosquito.png');
+  sun: string = require('./sun.png');
+  x: string = require('./X.png');
+
   marybud: string = require('./marybud-dogs.jpg');
   parkingMap: string = require('./parking.png');
   googleMapsLink: string = 'https://www.google.com/maps/@42.4816169,-87.969902,509m/data=!3m1!1e3';
@@ -16,7 +22,6 @@ export class WeddingDayComponent {
     new DayEvent('6:00p - 8:00p', 'Dinner'),
     new DayEvent('8:00p - 12:00a', 'Celebration')
   ];
-  attire: string = 'Suggested attire is relaxed formal (jacket optional) with lawn appropriate shoes as the ceremony and reception will be outdoors.';
 }
 
 class DayEvent {

@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class VenueLodgingComponent implements OnInit {
   holidayInn: string = require('./holiday-inn.jpg');
 
+  bus: string = require('./bus.png');
+  car: string = require('./car.png');
+  taxi: string = require('./taxi.png');
+  plane: string = require('./plane.png');
+
   constructor() { }
 
   ngOnInit() {

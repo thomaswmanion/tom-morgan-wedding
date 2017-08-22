@@ -11,29 +11,94 @@
         <h2 class="block font-size text-center">Holiday Inn Gurnee Convention Center</h2>
 
         <p class="card-text text-center block description">
-          <strong>Gurnee, IL</strong>
+          <strong><a href="https://www.google.com/maps/place/6161+W+Grand+Ave,+Gurnee,+IL+60031/@42.3838943,-87.9594782,15.05z/data=!4m5!3m4!1s0x880f8e22fa47106f:0x49b7e681f061125e!8m2!3d42.38229!4d-87.9547883">6161 W Grand Ave, Gurnee, IL 60031</a></strong>
         </p>
 
-        <img class="img-fluid" src="{{holidayInn}}">
+        <!-- <img class="img-fluid" [src]="holidayInn"> -->
 
         <!-- <p class="card-text description pad"> -->
         <!-- We are working on securing a block of rooms for our guests and plan on sending out an email once it is available. -->
         <p class="card-text description pad">
+          <strong class="alert-text">Update 8/7:</strong> Hotel reservations through the group discount are now closed and
+          the hotel is <strong>sold out</strong>. Still need a room? Email us at tom.morgan.manion@gmail.com as we have several
+          on hold under our name!
+
+        </p>
+        <!-- <p class="card-text description pad">
+
           We have secured a block of rooms for our guests at a discounted rate with group code <strong>MWB</strong> for the
           King-size or double room. Please click
           <a href="https://www.ihg.com/holidayinn/hotels/us/en/reservation/book?qGrpCd=COMING&qGRM=0&qBrs=hi.ex.rs.ic.cp.in.sb.cw.cv.6c.vn.ul.ki.sp.nd.ct&qRpn=1&srb_u=1&qCoMy=082017&qCoD=03&qRms=1&qRef=df&qCiD=01&qCiMy=082017&qSHp=1&qWch=0&qRtP=6CBARC&qSlH=chiwg&qAdlt=1&qHtlC=chiwg&qSrt=sBR&qSmP=3&qPSt=0&qRpp=20&qChld=0&qRRSrt=rt&method=roomRate#roomratestitle">here</a>          to view the room options and call to reserve at:<br> 1-800-465-4329.<br>
           <br> The hotel is located at the following address:
           <br> <a href="https://www.google.com/maps/place/6161+W+Grand+Ave,+Gurnee,+IL+60031/@42.3800044,-87.9670754,14.05z/data=!4m5!3m4!1s0x880f8e22fa47106f:0x49b7e681f061125e!8m2!3d42.3830247!4d-87.954406">6161 W Grand Ave, Gurnee, IL 60031</a>
           <br><br> The group rate is available until August 7th, but since it is a holiday weekend, the rooms will fill up
-          fast. Please book as soon as you can! If rooms are sold out in the block, please email us at tom.morgan.manion@gmail.com, or call Morgan or Tom as we have some additional rooms on hold.
-        </p>
+          fast. Please book as soon as you can! If rooms are sold out in the block, please email us at tom.morgan.manion@gmail.com,
+          or call Morgan or Tom as we have some additional rooms on hold.
+        </p> -->
       </div>
     </div>
     <div class="col-md-6">
       <div class="card sub-title">
         <h3 class="script text-center">Transportation</h3>
         <div class="splitter"></div>
-        <p>Coming Soon, to a browser near you!</p>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="img-fluid" [src]="plane" />
+          </div>
+          <div class="col-sm-8">
+            <p class="highlight">Flying in:</p>
+            <p>O’Hare International Airport (ORD)</p>
+            <p class="ital">Approx. 45 minutes</p>
+            <p>Milwaukee’s General Mitchell International Airport (MKE)</p>
+            <p class="ital">Approx. 50 minutes</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="img-fluid" [src]="taxi" />
+          </div>
+          <div class="col-sm-8">
+            <p class="highlight">Airport to Hotel:</p>
+            <p>You can Uber (~$50-$60) or take a cab (~$70+tip) from the airport to the hotel. </p>
+            <p>When returning to the airport, we suggest to arrange transportation ahead of time as ridesharing options are
+              still limited in this area.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="img-fluid" [src]="bus" />
+          </div>
+          <div class="col-sm-8">
+            <p class="highlight">Hotel to Wedding:</p>
+            <p>We have arranged shuttle buses to run to and from MaryBud Farms. If staying at the hotel, please use the shuttle
+              as parking is limited at the farm.</p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <img class="img-fluid" [src]="car" />
+          </div>
+          <div class="col-sm-8">
+            <p class="highlight">Hotel to Wedding:</p>
+            <p>We will have limited parking at the property for local guests only. The parking entrance is at the south end
+              of the property, off of Edwards Road. Directions will be emailed one week before the wedding to those who have
+              indicated they will be driving on their RSVP form.</p>
+          </div>
+        </div>
+
+        <hr>
+
+
       </div>
     </div>
   </div>

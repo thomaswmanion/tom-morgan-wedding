@@ -1,3 +1,4 @@
+import { WeekendActivitiesComponent } from './weekend-activities/weekend-activities.component';
 import { WeddingDayComponent } from './wedding-day/wedding-day.component';
 import { Routes } from '@angular/router';
 
@@ -59,6 +60,16 @@ export const appRoutes: Routes = [
         }
     },
     {
+        path: 'weekend-activities',
+        component: WeekendActivitiesComponent,
+        data: {
+            menu: {
+                title: "Activities",
+                icon: 'fa fa-calendar-plus-o'
+            }
+        }
+    },
+    {
         path: 'hotel-transport',
         component: VenueLodgingComponent,
         data: {
@@ -73,7 +84,7 @@ export const appRoutes: Routes = [
         component: RegistryInformationComponent,
         data: {
             menu: {
-                title: 'Registry Information',
+                title: 'Registry Info',
                 icon: 'fa fa-shopping-cart'
             }
         }

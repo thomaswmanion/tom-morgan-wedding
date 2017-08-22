@@ -22,6 +22,7 @@ import { ContactInformationComponent } from './save-the-date/contact-information
 import { FaqComponent } from './faq/faq.component';
 import { WeddingDayComponent } from './wedding-day/wedding-day.component';
 import { SundayInviteComponent } from './rsvp/sunday-invite/sunday-invite.component';
+import { WeekendActivitiesComponent } from './weekend-activities/weekend-activities.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { SundayInviteComponent } from './rsvp/sunday-invite/sunday-invite.compon
         CreateFormComponent,
         ContactInformationComponent,
         CountdownComponent,
-        SundayInviteComponent
+        SundayInviteComponent,
+        WeekendActivitiesComponent
     ]
 })
 export class AppRouterModule { }
