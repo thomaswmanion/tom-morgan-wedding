@@ -1,3 +1,5 @@
+//@import "~bootstrap/scss/_functions.scss";
+
 @import '~bootstrap/scss/_variables.scss';
 
 // Sizes
@@ -16,6 +18,7 @@ $rust: #663b17;
 $yellow: rgb(219, 167, 53);//#a08b59;
 $paper-bag: #9D8150;
 $text-color: lighten($yellow, 30%);
-$navbar-bg: darken(white, 10%);
+$navbar-bg: darkQen(white, 10%);
 
 $font-family: Calibri, "Courier New", Courier, monospace;
+$link-color: blue;
